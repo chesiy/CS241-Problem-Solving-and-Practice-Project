@@ -1,0 +1,25 @@
+
+.PHONY: clean all
+all: BarChart.o Graph.o GUI.o LineChart.o Simple_window.o Window.o
+	g++ $(FLTKFLAGS) -o execute main1.cpp BarChart.o Graph.o GUI.o LineChart.o Simple_window.o Window.o $(FLTKOPTIM) -std=c++11 $(FLTKLINK) && rm *.o
+
+BarChart.o:
+	g++ -c BarChart.cpp $(FLTKOPTIM)
+
+GUI.o:
+	g++ -c GUI.cpp $(FLTKOPTIM)
+
+LineChart.o:
+	g++ -c LineChart.cpp $(FLTKOPTIM)
+
+Simple_window.o:
+	g++ -c Simple_window.cpp $(FLTKOPTIM)
+
+Window.o:
+	g++ -c Window.cpp $(FLTKOPTIM)
+
+Graph.o:
+	g++ -c Graph.cpp $(FLTKOPTIM)
+
+clean:
+	rm *.o execute
