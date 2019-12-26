@@ -199,8 +199,24 @@ public:
 		sort(ys.begin(), ys.end(), cmp);
 		LineGraph l(ys, "work hour", "income", "Work hour-Income Graph");
 		Point tl(100, 100);           // to become top left  corner of window
-		Simple_window win(tl, 600, 400, "Canvas");    // make a simple window
+		Simple_window win(tl, 1000, 400, "Canvas");    // make a simple window
 		win.attach(l);
+		win.wait_for_button();       // give control to the display engine*/
+	}
+	void draw_occupation_income() {//画职业和收入关系
+		vector<pair<int, int>>num(14);
+		for (int i = 0; i < data.size(); i++) {
+			if(data[i][14]==0)
+				num[data[i][6]].second++;
+			else {
+				num[data[i][6]].first++;
+			}
+		}
+		vector<string> occup={ " Tech-support", " Craft-repair", " Other-service", " Sales", " Exec-managerial", " Prof-specialty", " Handlers-cleaners", " Machine-op-inspct", " Adm-clerical"," Farming-fishing", " Transport-moving", " Priv-house-serv"," Protective-serv", " Armed-Forces" };
+		anotherbargraph gr(num, "number", "occupation", "Occupation-Income Graph", occup);
+		Point tl(100, 100);           // to become top left  corner of window
+		Simple_window win(tl, 600, 400, "Canvas");    // make a simple window
+		win.attach(gr);
 		win.wait_for_button();       // give control to the display engine*/
 	}
 	

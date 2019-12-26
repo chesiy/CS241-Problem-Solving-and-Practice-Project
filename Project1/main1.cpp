@@ -39,14 +39,15 @@ int main()
 	pro.print();
 
 	cout << "\n*****\n";
-	da.draw_edu_income();
-	da.draw_mari_income();
-	da.draw_workhour_income();
+//	da.draw_edu_income();
+//	da.draw_mari_income();
+//	da.draw_workhour_income();
+	da.draw_occupation_income();
 	
-	Matrix W=pro.LogiReg();
-	W.print();
+//	Matrix W=pro.LogiReg();
+//	W.print();
 	/**************************Predict*****************************/
-	pro.LR_Predict(W);
+//	pro.LR_Predict(W);
 }
 
 //------------------------------------------------------------------------------
