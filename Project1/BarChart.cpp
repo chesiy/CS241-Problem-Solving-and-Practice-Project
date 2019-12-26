@@ -53,8 +53,6 @@ void BarGraph::draw_lines()const {
 }
 
 void anotherbargraph::draw_lines()const {
-	Graph_lib::Rectangle bigrec(Point(100, 100),Point(100 + xlength, 100 + ylength));
-	bigrec.draw();
 	Text title(Point(xlength/2-30, 70), Header);
 	title.set_color(Color::red);
 	title.draw();

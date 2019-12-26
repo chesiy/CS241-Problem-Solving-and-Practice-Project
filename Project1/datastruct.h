@@ -155,7 +155,7 @@ public:
 		vector<int> nus(monny, monny + 16);
 		BarGraph b(nus, "education", "income",  "Education - Income Graph",edu);
 		Point tl(100, 100);           // to become top left  corner of window
-		Simple_window win(tl, 600, 400, "Canvas");    // make a simple window
+		Simple_window win(tl, 900, 400, "Canvas");    // make a simple window
 		win.attach(b);
 		win.wait_for_button();       // give control to the display engine*/
 	}
@@ -199,7 +199,7 @@ public:
 		sort(ys.begin(), ys.end(), cmp);
 		LineGraph l(ys, "work hour", "income", "Work hour-Income Graph");
 		Point tl(100, 100);           // to become top left  corner of window
-		Simple_window win(tl, 1000, 400, "Canvas");    // make a simple window
+		Simple_window win(tl, 1300, 400, "Canvas");    // make a simple window
 		win.attach(l);
 		win.wait_for_button();       // give control to the display engine*/
 	}
@@ -215,7 +215,7 @@ public:
 		vector<string> occup={ " Tech-support", " Craft-repair", " Other-service", " Sales", " Exec-managerial", " Prof-specialty", " Handlers-cleaners", " Machine-op-inspct", " Adm-clerical"," Farming-fishing", " Transport-moving", " Priv-house-serv"," Protective-serv", " Armed-Forces" };
 		anotherbargraph gr(num, "number", "occupation", "Occupation-Income Graph", occup);
 		Point tl(100, 100);           // to become top left  corner of window
-		Simple_window win(tl, 600, 400, "Canvas");    // make a simple window
+		Simple_window win(tl, 600, 700, "Canvas");    // make a simple window
 		win.attach(gr);
 		win.wait_for_button();       // give control to the display engine*/
 	}
