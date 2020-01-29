@@ -10,14 +10,15 @@ The data set is 'US Adult Income' on Kaggle ('https://www.kaggle.com/johnolafenw
 ## Data Visualization
 Design a small tool using FLTK which can generate bar charts, line charts, and so on.
 ## Logistical Regression
-Complete a logistical regression algorithm with only C++ STL, and reach accuracy 78.43%, better than DummyClassifiers in Pythom. Here shows the pseudo code:  
-`while iteration_time > 0`  
-     `Y'=sigmoid(X*W); `  
-     `for i in Y':`  
-     `Loss=-Y[i]*log(Y'[i])-(1-Y[i])*log(1-Y'[i]); //count loss`  
-     `dW=X^T*(Y'-Y);`  
-      `W=W-dW*learning_rate;  //updata W using gradient descent`  
-     `iteration_time--;`  
-`end While`
-
+Complete a logistical regression algorithm with only C++ STL, and reach accuracy 78.43%, better than DummyClassifiers in Pythom. Here shows the pseudo code:
+```
+while iteration_time > 0
+     Y'=sigmoid(X*W);   
+     for i in Y':  
+     Loss=-Y[i]*log(Y'[i])-(1-Y[i])*log(1-Y'[i]); //count loss  
+     dW=X^T*(Y'-Y);  
+     W=W-dW*learning_rate;  //updata W using gradient descent  
+     iteration_time--;  
+end While
+```
      
